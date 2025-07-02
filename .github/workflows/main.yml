@@ -1,0 +1,47 @@
+name: WeChat Notification
+
+on:
+  push:
+    branches:
+      - LunarDay
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Send WeChat Notification
+        env:
+          APPID: ${{ secrets.APP_ID }}
+          APPSECRET: ${{ secrets.APP_SECRET }}
+          OPENID: ${{ secrets.USER_ID }}  # 接收消息的用户 OpenID
+          TEMPLATEID: ${{ secrets.TEMPLATE_ID }}
+        run: |
+          # 获取 Access Token
+          ACCESS_TOKEN=$(curl -s "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${APPID}&secret=${APPSECRET}" | jq -r '.access_token')
+          
+          if [ -z "$ACCESS_TOKEN" ]; then
+            echo "Failed to get access token"
+            exit 1
+          fi
+
+          # 发送模板消息到微信
+          curl -X POST "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=${ACCESS_TOKEN}" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "touser": "'"${OPENID}"'",
+            "template_id": "'"${TEMPLATEID}"'",  # 替换为你的模板消息 ID
+            "url": "https://github.com",  # 点击消息后跳转的链接
+            "data": {
+              "first": {
+                "value": "GitHub Push Notification",
+                "color": "#173177"
+              },
+              "keyword1": {
+                "value": "A new push has been made to the repository.",
+                "color": "#173177"
+              }
+            }
+          }'
