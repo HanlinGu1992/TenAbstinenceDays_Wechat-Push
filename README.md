@@ -1,4 +1,4 @@
-# Ten Abstinence Days - Wechat Push 十斋日微信测试号每日推送
+# Ten Abstinence Days - Wechat Push 十斋日微信测试号早8推送
 
 This project aims to implement an automated WeChat notification system that delivers daily reminders at 08:00 during ten abstinence days (lunar calendar dates: 1st, 8th, 14th, 15th, 18th, 23rd, 24th, 28th, 29th, and 30th) for spiritual practice adherence. The notification serves as a prompt for users to engage in the recitation of "The Sutra of Ksitigarbha Bodhisattva" as part of the religious discipline.
 
