@@ -30,7 +30,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Ten-Abstinence-Days Notification
       run: |
-        python Ten-Abstinence-Days.py
+        python test.py
       env:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
