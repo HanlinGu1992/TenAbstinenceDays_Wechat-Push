@@ -73,8 +73,8 @@ def send_message(access_token):
         return
 
     # 获取当前日期
-    # today = datetime.date.today()
-    today = datetime.datetime(2025, 7, 25)
+    today = datetime.date.today()
+    # today = datetime.datetime(2025, 7, 25)
     
     message_today = message_today_info(today)
     
