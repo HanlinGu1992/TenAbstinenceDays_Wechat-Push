@@ -24,14 +24,21 @@ This project aims to implement an automated WeChat notification system that deli
 本项目是在每月的十斋日，也就是阴历的初一、八、十四、十五、十八、二十三、二十四、二十八、二十九、三十，提醒收信人诵读地藏经。
 
 > Source1: 技术爬爬虾 (B站)
+> 
 > [1. 免费微信官方推送，做课程表提醒，给女友的天气预报，申请微信公众号测试号，Python定时任务做推送 还能做RSS订阅，运维告警，日程提醒 (视频)](<https://www.bilibili.com/video/BV1Ng4y1r7EP/?spm_id_from=333.788.videopod.sections&vd_source=2071812b61cf3c4c8a8a3a2b319f052d>)
+>
 > [1. 白嫖微信官方推送，课程提醒，给女友的天气预报 (文字版)](<https://www.bilibili.com/opus/881524080278241301>)
+>
 > [1. 样例代码 (GitHub)](<https://github.com/tech-shrimp/FreeWechatPush/ >)
 >
+> 
 > [2. Github的王炸功能，但很少人知道怎么用？免费运行程序，流水线编译部署，天气推送 签到薅羊毛 领京豆 CI/CD持续集成持续部署 (视频)](<https://www.bilibili.com/video/BV11e411i7Xx/?vd_source=2071812b61cf3c4c8a8a3a2b319f052d>)
+> 
 > [2. 样例代码 (GitHub)](<https://github.com/tech-shrimp/GithubActionSample>)
 >
+> 
 > Source2: 氢科技馆 (微信公众号)
+>
 > [教你如何使用测试号给对象推送消息|第一期](<https://mp.weixin.qq.com/s/O-fc4koVTyO-zCM8ZvXR0Q>)
 >
 
@@ -351,4 +358,5 @@ today = datetime.date.today()
 以上就是十斋日微信自动推送消息的全部内容，码字不易，转发请备注，谢谢。
 
 > Update: 2025-07-03
+> 
 > Author: Hanlin Gu
