@@ -148,7 +148,7 @@ This project aims to implement an automated WeChat notification system that deli
     </center>
 </div>
 
-2\. 在仓库的`Actions`中创建一个名为`workflows`，并添加`Ten-Abstinence-Days_Push.yml`文件，如下：
+2\. 在仓库的`Actions`中创建一个名为`workflows`，并添加`Ten-Abstinence-Days_Push8am.yml`文件，如下：
 
 ```yml
 # This workflow will install Python dependencies, 
@@ -156,7 +156,7 @@ This project aims to implement an automated WeChat notification system that deli
 # For more information see: 
 # https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: 十斋日推送
+name: 十斋日推送8am
 
 on:
   schedule:
