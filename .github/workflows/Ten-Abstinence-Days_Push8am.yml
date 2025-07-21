@@ -6,7 +6,7 @@ name: 十斋日推送8am
 on:
   schedule:
     # 设置启动时间，为 UTC 时间, UTC24点 对应北京时间早8点
-    - cron : '00 00 * * *'
+    - cron : '00 01 * * *'
   workflow_dispatch:
 
 permissions:
